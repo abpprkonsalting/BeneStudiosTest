@@ -8,6 +8,7 @@ class TaskHeader extends React.Component {
             value: this.props.value
         };
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
@@ -17,9 +18,13 @@ class TaskHeader extends React.Component {
         this.props.onEditTitle(this.state.value.key);
     }
 
+    handleSubmit(event) {
+        event.preventDefault();
+    }
+
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <input type="text" value={this.state.value.title} onChange={this.handleChange} />
             </form>
         );
