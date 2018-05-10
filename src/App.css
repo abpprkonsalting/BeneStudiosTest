@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.container {
+  padding: 10px 10%;
+}
+
+.container .task-list {
+  border: 1px solid gray;
+}
+
+.container .task-list ol {
+  padding: 0;
+  margin: 0;
+}
+
+.container .task-list ol > div:first-child {
+  border-top: 1px solid lightgray;
+}
+
+.container .task-list .task-list-header {
+  display: flex;
+  height: 28px;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .task-list .task-list-header span{
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.container .task-list .task-list-header a {
+  margin-right: 10px;
+}
+
+.task {
+  background: #f3f3f3;
+}
+
+.task * {
+  background: #f3f3f3;
+}
+
+.task .task-header{
+  display: flex;
+  padding: 5px 0;
+}
+
+.task .task-header a {
+  margin-left: 10px;
+}
+
+.task .task-header a:not(:first-child) {
+  margin-right: 10px;
+}
+
+.task .task-header a.mark.inactive {
+  color: lightgray;
+}
+
+.task .task-header form {
+  display: flex;
+  flex-grow: 1;
+}
+
+.task .task-header form input {
+  width: 100%;
+  border: none;
+  background: #f3f3f3;
+  outline: none;
+}
+
+.task .task-body {
+  overflow: hidden;
+}
+
+.task .task-body .task-body-text {
+  height: 150px;
+  background: white;
+  margin-top: -200px;
+  -webkit-transition: margin-top 500ms;
+  transition: margin-top 500ms;
+  border-bottom: 1px solid lightgray;
+  background: white;
+  border-top: 1px solid lightgray;
+  padding: 5px 10px 5px 57px;
+}
+
+.task .task-body .task-body-text.shown {
+  margin-top: 0;
+}
+
+.task .task-body-text form {
+  height: 100%;
+}
+
+.task .task-body-text form textarea {
+  background:white;
+  width: 100%;
+  height: 100%;
+  border:none;
+  outline:none;
+}
